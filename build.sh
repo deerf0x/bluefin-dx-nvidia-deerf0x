@@ -22,4 +22,4 @@ RELEASE="$(rpm -E %fedora)"
 
 # systemctl enable podman.socket
 
-rpm-ostree install mozilla-fira-sans-fonts papirus-icon-theme displaylink
+rpm-ostree install mozilla-fira-sans-fonts papirus-icon-theme papirus-icon-theme-light papirus-icon-theme-dark epapirus-icon-theme displaylink usbguard
