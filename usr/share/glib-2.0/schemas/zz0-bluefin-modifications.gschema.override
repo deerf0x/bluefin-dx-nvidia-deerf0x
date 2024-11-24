@@ -2,7 +2,8 @@
 
 [org.gnome.shell]
 favorite-apps = ['org.mozilla.firefox.desktop', 'org.mozilla.Thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Rhythmbox3.desktop', 'org.libreoffice.LibreOffice.writer.desktop', 'org.gnome.Software.desktop', 'code.desktop', 'ubuntu.desktop', 'yelp.desktop']
-enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'gsconnect@andyholmes.github.io', 'search-light@icedman.github.com']
+disabled-extensions=['blur-my-shell@aunetx', 'dash-to-dock@micxgx.gmail.com', 'logomenu@aryan_k', 'tailscale@joaophi.github.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'gsconnect@andyholmes.github.io', 'search-light@icedman.github.com', 'clipboard-indicator@tudmotu.com', 'color-picker@tuberry', 'unblank@sun.wxg@gmail.com', 'appmenu-is-back@fthx']
 
 [org.gnome.desktop.background]
 picture-uri='file:///usr/share/backgrounds/wallpaper.png'
@@ -12,13 +13,26 @@ primary-color='000000'
 secondary-color='FFFFFF'
 
 [org.gnome.desktop.interface]
+accent-color="purple"
+clock-format="24h"
+color-scheme="prefer-dark"
+document-font-name="Cantarell 12"
 enable-hot-corners=true
 clock-show-weekday=true
 font-antialiasing="rgba"
+font-hinting="none"
 font-name="Fira Sans 11.5"
-document-font-name="Cantarell 12"
+gtk-enable-primary-paste=false
+gtk-theme="adw-gtk3-dark"
+icon-theme="Papirus-Dark"
 monospace-font-name="FiraCode Nerd Font Mono 12"
-accent-color="purple"
+show-battery-percentage=true
+
+[org.gnome.desktop.privacy]
+old-files-age=uint32 30
+recent-files-max-age=-1
+remember-recent-files=false
+report-technical-problems=false
 
 [org.gnome.desktop.sound]
 allow-volume-above-100-percent=false
@@ -57,7 +71,10 @@ min-alpha=0.5
 running-indicator-style='DOTS'
 
 [org.gnome.settings-daemon.plugins.power]
-power-button-action='interactive'
+idle-dim=false
+power-saver-profile-on-low-battery=false
+sleep-inactive-ac-type='nothing'
+sleep-inactive-battery-type='nothing'
 
 [org.gtk.Settings.FileChooser]
 sort-directories-first=true
@@ -120,12 +137,20 @@ home=['<Super>e']
 
 # Ptyxis color palette is recognized as a relocatable schema
 [org.gnome.Ptyxis]
+window-size=(uint32 104, uint32 30)
 interface-style='system'
 restore-session=false
 restore-window-size=false
 audible-bell=false
 profile-uuids=['2871e8027773ae74d6c87a5f659bbc74']
 default-profile-uuid='2871e8027773ae74d6c87a5f659bbc74'
+
+[org.gnome.Ptyxis.Profiles.2871e8027773ae74d6c87a5f659bbc74]
+custom-command='/usr/bin/fish'
+label='Default'
+login-shell=false
+palette='dracula'
+use-custom-command=true
 
 # LogoMenu extension misses gschema XML file, so it's located in dconf
 

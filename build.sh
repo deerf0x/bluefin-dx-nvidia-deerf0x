@@ -57,3 +57,11 @@ curl -sL https://ncastillo.xyz/wallpaper.png -o /usr/share/backgrounds/wallpaper
 
 echo "Re-compiling gschema to include setting overrides"
 glib-compile-schemas /usr/share/glib-2.0/schemas &>/dev/null
+
+curl -sL https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-folders/refs/heads/master/papirus-folders -o /usr/bin/papirus-folders
+
+chmod +x /usr/bin/papirus-folders
+
+/usr/bin/papirus-folders -C violet --theme Papirus-Dark
+/usr/bin/papirus-folders -C violet --theme Papirus
+/usr/bin/papirus-folders -C violet --theme ePapirus
