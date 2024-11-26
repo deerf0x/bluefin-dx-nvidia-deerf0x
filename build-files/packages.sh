@@ -18,4 +18,5 @@ rpm-ostree install displaylink \
   nmap \
   netcat \
   efivar \
-  efivar-libs
+  efivar-libs \
+  smartmontools
